@@ -12,32 +12,8 @@ import transforms as T
 #from src.unet import UNet as UNet
 #from drive_dataset import DriveDataset
 from GLAs_dataset import DriveDataset
-from src.unet import convUnet as UNet
-#from src.newunet import convUnet as UNet
-#from src.metaunet import convUnet as UNet
-from src.EI import UNet
-#from src.DCAN import DCANet as UNet
-##from src.MILD import MILD_Net as UNet
-#from src.FEED import FEEDNet as UNet
-#from src.xiaorong import UNet as UNet
-#from src.xiaorongunet import convUnet as UNet
-#from src.yuanshiunet import UNet
-#from src.Unode import ConvODEUNet
-#from src.CMU_NET import CMUNet as UNet
-#from src.MEW_UNET import MEWUNet as UNet
-#from src.CPFNET import CPFNet as UNet
-#
-#from src.attentionunet import  AttentionUnet as UNet
-#from src.ConvUNeXt import ConvUNeXt as UNet
-#from src.unet_more import NestedUNet as UNet
-#from src.double_unet import Double_UNet as UNet
-#from src.resunet_more import ResUnetPlusPlus as UNet
-# SEED=513
-# random.seed(SEED)
-# np.random.seed(SEED)
-# torch.manual_seed(SEED)  # 为CPU设置种子用于生成随机数，以使得结果是确定的
-# torch.cuda.manual_seed(SEED)  # 为GPU设置随机种子
-# torch.cuda.manual_seed_all(SEED)
+from model import convUnet as UNet
+
 def setup_seed(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
