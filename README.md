@@ -1,10 +1,15 @@
-#MMUNet: Morphological feature enhancement network for colon
+#
+MMUNet: Morphological feature enhancement network for colon
 cancer segmentation in pathological images
 
-#包括GLAS数据集
+#
+包括GLAS数据集
 
-#python train.py
+#
+python train.py
 
-#python predict.py
+#
+python predict.py
 
-#python pingjia.py
+#
+python pingjia.py
