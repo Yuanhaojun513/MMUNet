@@ -46,7 +46,7 @@ def show_feature_map(feature_map,save_path):
 def main():
     classes = 1  # exclude background
     weights_path = r"save_weights5/best_model.pth"
-    img_path = r"/home/yhj/yhj/sbunet/GLAS/test/images"
+    img_path = r"./GLAS/test/images"
     img_list = os.listdir(img_path)
     img_list=natsort.natsorted(img_list)
     print(img_list)
