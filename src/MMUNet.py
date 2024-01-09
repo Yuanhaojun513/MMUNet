@@ -478,7 +478,7 @@ class MMUNet(nn.Module):
 
 
 if __name__ == "__main__":
-    model = MMUNet(in_channels=3, num_classes=2, base_channels=8).to('cuda')
+    model = MMUNet(in_channels=3, num_classes=2, base_channels=64).to('cuda')
     # model = UNet(in_channels=3, num_classes=2, base_c=32).to('cuda')
     summary(model, input_size=(3, 224, 224))
     input = torch.randn(1, 3, 224, 224).to('cuda')
