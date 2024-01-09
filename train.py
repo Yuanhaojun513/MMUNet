@@ -211,5 +211,7 @@ if __name__ == '__main__':
 
     if not os.path.exists("./save_weights5"):
         os.mkdir("./save_weights5")
+    if not os.path.exists("./results"):
+        os.mkdir("./results")
 
     main(args)
