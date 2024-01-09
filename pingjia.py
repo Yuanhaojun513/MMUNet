@@ -24,7 +24,7 @@ def mean_iou(input, target, classes = 2):
     return  miou
 
 
-test="/home/yhj/yhj/sbunet/GLAS/test/masks"
+test="./GLAS/test/masks"
 #test = r"./newcrag/test/masks"
 #test="./CRAG/test/masks"
 #test = r"D:\yhj\ai\data\nous\test\masks"
