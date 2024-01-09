@@ -1,2 +1,2 @@
-#MMUNet：结肠形态特征增强网络
-图像病理中的癌症分割
+#MMUNet: Morphological feature enhancement network for colon
+cancer segmentation in pathological images
