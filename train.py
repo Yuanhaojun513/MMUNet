@@ -5,14 +5,14 @@ import datetime
 
 import torch
 import numpy as np
-#from src.ConvUNeXt import ConvUNeXt as UNet
+
 from train_utils import train_one_epoch, evaluate, create_lr_scheduler
 
 import transforms as T
-#from src.unet import UNet as UNet
-#from drive_dataset import DriveDataset
+
 from GLAs_dataset import DriveDataset
-from model import convUnet as UNet
+
+from src.MMUNet import MMUNet as UNet
 
 def setup_seed(seed):
     torch.manual_seed(seed)
@@ -22,12 +22,6 @@ def setup_seed(seed):
     torch.backends.cudnn.deterministic = True
 
 
-# 设置随机数种子
-
-
-# #torch.backends.cudnn.benchmark = False  # if benchmark=True, deterministic will be False
-# torch.backends.cudnn.deterministic = True
-#print(random.seed())
 class SegmentationPresetTrain:
     def __init__(self, base_size, crop_size, hflip_prob=0.5, vflip_prob=0.5,
                  mean=(0.786, 0.518, 0.784), std=(0.153, 0.210, 0.113)):
@@ -75,8 +69,6 @@ def get_transform(train, crop_size = 224, mean=(0.786, 0.518, 0.784), std=(0.153
 
 def create_model(num_classes):
     model = UNet(in_channels=3, num_classes=num_classes, base_channels=64)
-   # model =   ConvODEUNet(num_filters=16, output_dim=2, time_dependent=True,
-               #       non_linearity='lrelu', adjoint=True, tol=1e-3)
     return model
 
 
@@ -214,7 +206,7 @@ def parse_args():
 
 
 if __name__ == '__main__':
-    setup_seed(40)
+    setup_seed(42)
     args = parse_args()
 
     if not os.path.exists("./save_weights5"):
